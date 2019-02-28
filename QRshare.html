@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>全程心管家</title>
+</head>
+<body>
+
+<div style="width: 100%;text-align: center;margin-top: 100px;color: #A2A2A2;">
+  <img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQGp8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAydVpQNmNUZWRjZGsxMDAwMGcwM1MAAgQpjVpbAwQAAAAA"
+       alt="二维码" id="userQR" width="220" height="220">
+  <p>长按识别二维码</p>
+  <p>
+    立即向 <b id="username" style="color: #000;letter-spacing: 1px;">李杰</b> 医生报到
+  </p>
+</div>
+<script>
+  function GetQueryString(name,QR) {
+    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)" + QR + "=([^&]*)(&|$)", "i");
+    let r = window.location.search.substr(1).match(reg);
+    let username = "李杰", userQR = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQGp8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAydVpQNmNUZWRjZGsxMDAwMGcwM1MAAgQpjVpbAwQAAAAA";
+    if (r != null){
+      username = r[2]; userQR = r[4];
+    }
+    reg = null; r = null;
+    return (
+      username == null || username == "" || username == "undefined" ? "" : username,
+      userQR == null || userQR == "" || userQR == "undefined" ? "" : userQR,
+      document.getElementById("username").innerHTML = decodeURIComponent(username),
+      document.getElementById("userQR").setAttribute('src',userQR)
+    )
+  }
+  GetQueryString("name","qrUrl");
+</script>
+</body>
+</html>

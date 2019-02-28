@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container" style="height: 100%"></div>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    const url = "http://10.2.97.47:8080/data/get";
+
+    function getData() {
+      return new Promise(function (resolve, reject) {
+        $.getJSON(url, function (result) {
+          resolve(result);
+        })
+      });
+    }
+
+    getData().then(res => {
+      const dom = document.getElementById("container");
+      const myChart = echarts.init(dom);
+      let option, keys, values, cate, seriesData, newArray, data = [], dataArr = [], seriesName, userName, nameArr = [];
+
+      // const res = {
+      //   "0": [{"userName": "郁士中", "datas": ["1.07", "1.04", "1.46"]},
+      //     {
+      //       "userName": "李明亮",
+      //       "datas": ["1.47", "0.69", "1.20"]
+      //     },{
+      //       "userName": "李明亮",
+      //       "datas": ["1.47", "0.69", "1.20"]
+      //     }],
+      //   "-1": [{"userName": "张洪英", "datas": ["1.67", "1.79", "2.02"]},
+      //     {
+      //       "userName": "俞国伟",
+      //       "datas": ["1.15", "2.02", "2.01"]
+      //     }],
+      //   "-2": [{"userName": "相品堂", "datas": ["1.2400", "1.45", "1.7000"]}],
+      //   "-4": [{"userName": "黄炳昌", "datas": ["3.70", "3.36", "2.76", "2.87", "2.75", "2.96"]}],
+      //   "-5": [{"userName": "章龙珍", "datas": ["1.10", "1.30", "1.63"]}],
+      //   "-12": [{"userName": "吴伟超", "datas": ["0.99", "1.46", "1.20"]}]
+      // }
+
+      if (res) {
+        keys = Object.keys(res);
+        values = Object.values(res);
+        const len = values.length;
+        for (let i = 0; i < len; i++) {
+          seriesData = [];
+          seriesName = [];
+          for (let j = 0; j < len; j++) {
+            cate = [];
+            userName = [];
+            for (let m = 0; m < values[i].length; m++) {
+              let lastData = values[i][m].datas;
+              let lastUserName = values[i][m].userName;
+              cate.push(lastData);
+              userName.push(lastUserName);
+            }
+            seriesData.push(cate);
+            seriesName.push(userName);
+          }
+          dataArr.push(seriesData[0]);
+          nameArr.push(seriesName[0]);
+        }
+
+        //取出数据中长度最大值并让第一项使其长度等大
+        let newArr = [], maxLen;
+        dataArr.map(value => {
+          newArr.push(value.length);
+        });
+        newArr.sort();
+        maxLen = newArr[newArr.length - 1];
+        if (dataArr[0].length < maxLen) {
+          let firstArr = [...dataArr[0]];
+          for (let i = 0; i < maxLen - firstArr.length; i++) {
+            dataArr[0].push('')
+          }
+        }
+        //置换数组横竖排列
+        newArray = dataArr[0].map(function (col, i) {
+          return dataArr.map(function (row) {
+            return row[i] || [];
+          })
+        });
+        // console.log(newArray);
+        // console.log(nameArr);
+
+        for (let n = 0; n < newArray.length; n++) {
+          data.push(echarts.dataTool.prepareBoxplotData(newArray[n]));
+        }
+
+        function handleData() {
+          const serArr = [];
+          // const names = [].concat.apply([], nameArr);
+          for (let i = 0; i < newArray.length; i++) {
+            const ser = {
+              name: `category${i}`,
+              type: 'boxplot',
+              data: data[i].boxData,
+              tooltip: {formatter: formatter}
+            };
+            serArr.push(ser);
+          }
+          return serArr;
+        }
+
+        option = {
+          title: {
+            text: 'Multiple Categories',
+            left: 'center',
+          },
+          legend: {
+            y: '10%',
+            formatter: function (name) {
+              return name;
+            }
+            // data: [].concat.apply([], nameArr),
+            // data: ['category0', 'category1', 'category2', 'category3']
+          },
+          tooltip: {
+            trigger: 'item',
+            axisPointer: {
+              type: 'shadow'
+            }
+          },
+          grid: {
+            left: '10%',
+            top: '20%',
+            right: '10%',
+            bottom: '15%'
+          },
+          xAxis: {
+            type: 'category',
+            data: data[0].axisData,
+            boundaryGap: true,
+            nameGap: 30,
+            splitArea: {
+              show: true
+            },
+            axisLabel: {
+              formatter: function (value, index) {
+                return keys[value];
+              }
+              // formatter: 'expr {value}'
+            },
+            splitLine: {
+              show: false
+            }
+          },
+          yAxis: {
+            type: 'value',
+            name: 'Value',
+            min: 0,
+            max: 10,
+            splitArea: {
+              show: false
+            }
+          },
+          dataZoom: [
+            {
+              type: 'inside',
+              start: 0,
+              end: 20
+            },
+            {
+              show: true,
+              height: 20,
+              type: 'slider',
+              top: '90%',
+              xAxisIndex: [0],
+              start: 0,
+              end: 20
+            }
+          ],
+          series: handleData(),
+        };
+
+        function formatter(param) {
+          param.seriesName = nameArr[param.dataIndex][param.seriesIndex];
+          return [
+            param.seriesName + ': ',
+            'upper: ' + param.data[0],
+            'Q1: ' + param.data[1],
+            'median: ' + param.data[2],
+            'Q3: ' + param.data[3],
+            'lower: ' + param.data[4]
+          ].join('<br/>')
+        }
+
+        if (option && typeof option === "object") {
+          myChart.setOption(option, true);
+        }
+      }
+    })
+      .catch(e => {
+        console.log(e)
+      })
+  })
+
+
+</script>
+</body>
+</html>

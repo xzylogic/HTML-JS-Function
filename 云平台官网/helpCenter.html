@@ -1,0 +1,613 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>博达云平台帮助中心</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/helpCenter.css"/>
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+    $('.help_li li').click(function(){
+        $(this).siblings('li').removeClass('au');
+        $(this).addClass('au'); 
+		$(this).find('a').css('font-weight','700');
+		$(this).siblings('li').find('a').css('font-weight','500');
+	
+	})
+    $('#ab_shop').click(function(){
+        $('#a_shop').siblings('li').removeClass('au');
+        $('#a_shop').addClass('au'); 
+		$('#a_shop').find('a').css('font-weight','700');
+		$('#a_shop').siblings('li').find('a').css('font-weight','500');
+	    $('#a_intro').removeClass('au');
+	})	
+	$('#ab_ap').click(function(){
+        $('#a_ap').siblings('li').removeClass('au');
+        $('#a_ap').addClass('au'); 
+		$('#a_ap').find('a').css('font-weight','700');
+		$('#a_ap').siblings('li').find('a').css('font-weight','500');
+	    $('#a_intro').removeClass('au');
+	})
+	$('#ab_adv').click(function(){
+        $('#a_adv').siblings('li').removeClass('au');
+        $('#a_adv').addClass('au'); 
+		$('#a_adv').find('a').css('font-weight','700');
+		$('#a_adv').siblings('li').find('a').css('font-weight','500');
+	    $('#a_intro').removeClass('au');
+	})
+	$('#ab_wifi').click(function(){
+        $('#a_wifi').siblings('li').removeClass('au');
+        $('#a_wifi').addClass('au'); 
+		$('#a_wifi').find('a').css('font-weight','700');
+		$('#a_wifi').siblings('li').find('a').css('font-weight','500');
+	    $('#a_intro').removeClass('au');
+	})
+	$('#ab_ac').click(function(){
+        $('#a_ac').siblings('li').removeClass('au');
+        $('#a_ac').addClass('au'); 
+		$('#a_ac').find('a').css('font-weight','700');
+		$('#a_ac').siblings('li').find('a').css('font-weight','500');
+	    $('#a_intro').removeClass('au');
+	})
+	$('#ab_ssid').click(function(){
+        $('#a_ssid').siblings('li').removeClass('au');
+        $('#a_ssid').addClass('au'); 
+		$('#a_ssid').find('a').css('font-weight','700');
+		$('#a_ssid').siblings('li').find('a').css('font-weight','500');
+	    $('#a_intro').removeClass('au');
+	})
+	$('#ab_art').click(function(){
+        $('#a_art').siblings('li').removeClass('au');
+        $('#a_art').addClass('au'); 
+		$('#a_art').find('a').css('font-weight','700');
+		$('#a_art').siblings('li').find('a').css('font-weight','500');
+	    $('#a_intro').removeClass('au');
+	})
+}); 
+
+function $(v){return document.getElementById(v);}
+var x=0;
+function c(y){
+$("a"+x).style.display = "none";
+$("a"+y).style.display = "";
+x=y
+}
+</script>
+<body>
+<!-- 头部 -->
+<div class="top_box">
+	<div class="top">
+    
+    	<ul style=" margin-left:-40px; line-height:50px; text-decoration:none">
+        	<li><a href="index.html"><img style=" margin-top:5px;" src="imgaes/helpCenter/logo.jpg" /></a></li>
+        	<li><a href="index.html">网站首页</a></li>
+            <li><a href="index.html#nav_box2">产品服务</a></li>
+            <li><a href="index.html#nav_box3	">合作伙伴</a></li>
+            <li><a href="helpCenter.html">帮助中心</a></li>
+            <li><a href="index.html#nav_box5">联系我们</a></li>
+        </ul>
+        <div class="btn">
+        <img src="imgaes/helpCenter/denglu.jpg" />
+        <img src="imgaes/helpCenter/zhuce.jpg" />	
+        </div>
+    </div>
+  
+</div>
+<!-- 内容区域 -->
+<div class="content_box">
+<div class="main_box">
+<!-- 海报图 -->
+<div class="flash">
+<img src="imgaes/helpCenter/flash1.jpg" />
+</div>
+<!-- 内容 -->
+<div class="main">
+<!-- 帮助中心 -->
+<div class="help_center">
+<span class="help_font">帮助中心</span>
+<ul id="help_center" class="help_li">
+<li class="au"><a href="javascript:;" onclick="c(0)">微信连WIFI</a></li>
+<li><a href="javascript:;" onclick="c(2)">查看微信版本号</a></li>
+<li><a href="javascript:;" onclick="c(3)">短信登陆</a></li>
+<li><a href="javascript:;" onclick="c(4)">静态密码登陆</a></li>
+<li><a href="javascript:;" onclick="c(7)">修改静态密码</a></li>
+<li><a href="javascript:;" onclick="c(6)">退出登陆</a></li>
+</ul>
+<span class="help_font" style=" margin-top:-137px;">商铺指南</span>
+<ul id="help_center" class="help_li">
+<li id="a_intro"><a href="javascript:;" onclick="c(11)" id="a_intro">商铺新手攻略</a></li>
+<li id="a_shop"><a href="javascript:;" onclick="c(12)">商铺注册</a></li>
+<li id="a_ac"><a href="javascript:;" onclick="c(14)">添加AC</a></li>
+<li id="a_ap"><a href="javascript:;" onclick="c(8)">添加AP</a></li>
+<li id="a_ssid"><a href="javascript:;" onclick="c(9)">添加热点（SSID）</a></li>
+<li id="a_art"><a href="javascript:;" onclick="c(16)">广告素材上传</a></li>
+<li id="a_adv"><a href="javascript:;" onclick="c(10)">广告投放</a></li>
+<li><a href="javascript:;" onclick="c(13)">自定义广告模板</a></li>
+<li id="a_wifi"><a href="javascript:;" onclick="c(1)">WIFIDOG设备注册</a></li>
+<li><a href="javascript:;" onclick="c(15)">微信连WIFI商户指南</a></li>
+<li><a href="javascript:;" onclick="c(17)">短信模板设置</a></li>
+</ul>
+
+
+<div>
+
+
+
+
+
+
+</div>
+</div>
+<!-- 右侧内容 -->
+ <!-- 登陆演示 -->
+<div class="help_content_login" id="a0">
+<div class="login_title"><span>登陆演示</span></div>
+<div class="login_info"><span>微信连wifi需要微信6.2.5以上版本。有些浏览器可能也不支持此功能，经测试可以使用
+的浏览器包括chrome、firefox、UC。</span></div>
+<ul>
+<li><span class="title_big">步骤一：</span><br /><span class="title_con">打开手机上的无线设置</span><img src="imgaes/helpCenter/login1.jpg" /></li>
+<li><span class="title_big">步骤二：</span><br /><span class="title_con">手机开始搜索无线网络，手动选定要链接的无线网络。这个例子中连接的网络是bdyun</span><img src="imgaes/helpCenter/login2.jpg" /></li>
+<li><span class="title_big">步骤三：</span><br /><span class="title_con">在手机浏览器中任意打开一个网址（如www.baidu.com),出现如下Portal页面</span><img src="imgaes/helpCenter/login3.jpg" /></li>
+<li><span class="title_big">步骤四：</span><br /><span class="title_con">点击绿色的微信连wifi的按钮，微信弹出下面的连接页面</span><img src="imgaes/helpCenter/login4.jpg" /></li>
+<li><span class="title_big">步骤五：</span><br /><span class="title_con">点击立即连接按钮，出现下面的连接成功页面</span><img src="imgaes/helpCenter/login5.jpg" /></li>
+<li><span class="title_big">步骤六：</span><br /><span class="title_con">点击完成页面，出现商家的微信公众号页面。这里出现的是博达云平台的微信公众号的页面，成功连接WIFI。</span><img src="imgaes/helpCenter/login6.jpg" /></li>
+</ul>
+</div>
+ <!-- WIFIDOG设备注册 -->
+<div class="help_content_sign" id="a1" style="display:none">
+<div class="login_title"><span>WIFIDOG设备注册</span></div>
+<br />
+<span class="title_big">步骤一：</span>
+<p>1、打开博达云平台网址http://platform.bdcom.com.cn:8080/adminbd/index , 或者139.196.25.90:8080/adminbd/index</p>
+<br />
+<p><img src="imgaes/helpCenter/sign1.jpg" /></p>
+<br />
+<p>2、若有账户直接登录，没有账号的点击注册可以注册，点击提交会提示注册成功，待审核。</p>
+<br />
+<p><img src="imgaes/helpCenter/sign2.jpg" /></p>
+<br />
+<p>3、审核成功后，登录</p>
+<br />
+<p><img src="imgaes/helpCenter/sign3.jpg" /></p>
+<br />
+<p>4、登录成功后</p>
+<br />
+<p><img src="imgaes/helpCenter/sign4.jpg" /></p>
+<br />
+<p>5、查看商铺列表<br/>此时注意商户id和铺主（即管理员），wifidog路由器注册时会用到</p>
+<br />
+<p><img src="imgaes/helpCenter/sign5.jpg" /></p>
+<br />
+<span class="title_big">步骤二：</span>
+<br />
+<p>1、安装好wifidog路由器，连接wan, 打开路由器，通过电脑终端连接路由器。
+通过192.168.1.1(默认)连接访问路由器，通过root/bdinside登录
+</p>
+<br />
+<p><img src="imgaes/helpCenter/sign6.jpg" /></p>
+<br />
+<p><img src="imgaes/helpCenter/sign8.jpg" /></p>
+<br />
+<p>2、选择wifidog服务， 平台选择bdcom, 是否启用wifidog选择启用，点击保存并应用</p>
+<br />
+<p><img src="imgaes/helpCenter/sign9.jpg" /></p>
+<br />
+<span class="title_big">步骤三：</span>
+<br/>
+<p>最新的版本3167（及后续版本）注册过程</p>
+<br/>
+<p><img src="imgaes/helpCenter/a123.jpg" /></p>
+<br/>
+<p>1、点击访问后会出现一下表单：</p>
+<br/>
+<p><img src="imgaes/helpCenter/sign10.jpg" /></p>
+<br />
+<p>2、填写网关名称，ssid, 商铺编号，管理员，密码等信息后提交。</p>
+<p>注：网关名，可任意，ssid目前若需要使用微信登录，需要修改为bdyun（使用博达云平台这个公众号）,</p>
+<p>商铺编号为博达云平台中商铺列表中的编号，和管理员，密码为对应管理员密码</p>
+<br/>
+<p><img src="imgaes/helpCenter/sign11.jpg" /></p>
+<br />
+<p>提交之后会出现注册成功的页面,如下：</p>
+<p><img src="imgaes/helpCenter/sign12.jpg" /></p>
+<br />
+<span class="title_big">步骤四：</span>
+<br/>
+<p>使用博达wifi云平台登录
+<p>此时需要等待一到两分钟，等待设备修改对应的网关名称，和ssid,</p>
+<p>接下来，就可用portal登录云平台，</p>
+<p>比如直接访问www.baidu.com ,会直接重定向到以下页面：</p>
+<br/>
+<p><img src="imgaes/helpCenter/sign13.jpg" /></p>
+<br />
+<br />
+</div>
+ <!-- 查看微信版本号 -->
+<div class="help_content_weixin" id="a2" style="display:none">
+<div class="login_title"><span>查看微信版本号</span></div>
+
+<ul>
+<li><span class="title_big">步骤一：</span><br /><span class="title_con">打开微信</span><img src="imgaes/helpCenter/weixin1.jpg" /></li>
+<li><span class="title_big">步骤二：</span><br /><span class="title_con">点击右下角的“我”进入如下页面</span><img src="imgaes/helpCenter/weixin2.jpg" /></li>
+<li><span class="title_big">步骤三：</span><br /><span class="title_con">点击设置，进入以下界面</span><img src="imgaes/helpCenter/weixin3.jpg" /></li>
+<li><span class="title_big">步骤四：</span><br /><span class="title_con">点击关于微信，即可看到微信的版本号</span><img src="imgaes/helpCenter/weixin4.jpg" /></li>
+
+</ul>
+
+</div>
+ <!-- 短信认证登陆 -->
+<div class="help_content_duanxin" id="a3" style="display:none">
+<div class="login_title"><span>短信认证登陆</span></div>
+
+<ul>
+<li><span class="title_big">步骤一：</span><br /><span class="title_con">打开手机上的无线设置</span><img src="imgaes/helpCenter/duanxin1.jpg" /></li>
+<li><span class="title_big">步骤二：</span><br /><span class="title_con">手机开始搜索无线网络，手动选定要链接的无线网络。这个例子中连接的网络是bdyun</span><img src="imgaes/helpCenter/duanxin2.jpg" /></li>
+<li><span class="title_big">步骤三：</span><br /><span class="title_con">在手机浏览器中任意打开一个网址（如www.baidu.com),出现如下Portal页面</span><img src="imgaes/helpCenter/duanxin3.jpg" /></li>
+<li><span class="title_big">步骤四：</span><br /><span class="title_con">输入手机号，点击申请动态密码，一分钟内只能点击一次。如得不到验证码，请时间到后重新点击获取。</span><img src="imgaes/helpCenter/duanxin4.jpg" /></li>
+<li><span class="title_big">步骤五：</span><br /><span class="title_con">得到验证码后将验证码输入到密码框中，点击登录。</span><img src="imgaes/helpCenter/duanxin5.jpg" /></li>
+<li><span class="title_big">步骤六：</span><br /><span class="title_con">等待跳转页面完成，即可完成登录。此时已经正常链接WIFI。</span><img src="imgaes/helpCenter/duanxin6.jpg" /></li>
+</ul>
+
+</div>
+ <!-- 静态密码登陆 -->
+<div class="help_content_static" id="a4" style="display:none">
+<div class="login_title"><span>静态密码登陆</span></div>
+
+<ul>
+<li><span class="title_big">步骤一：</span><br /><span class="title_con">打开手机上的无线设置</span><img src="imgaes/helpCenter/static1.jpg" /></li>
+<li><span class="title_big">步骤二：</span><br /><span class="title_con">手机开始搜索无线网络，手动选定要链接的无线网络。这个例子中连接的网络是bdyun</span><img src="imgaes/helpCenter/static2.jpg" /></li>
+<li><span class="title_big">步骤三：</span><br /><span class="title_con">在手机浏览器中任意打开一个网址（如www.baidu.com),出现如下Portal页面</span><img src="imgaes/helpCenter/static3.jpg" /></li>
+<li><span class="title_big">步骤四：</span><br /><span class="title_con">点击登录上方的静态密码，输入即可链接WIFI。</span><img src="imgaes/helpCenter/static4.jpg" /></li>
+<li><span class="title_big">步骤五：</span><br /><span class="title_con">点击登陆后，跳转到广告页面，等待即可成功登陆。</span><img src="imgaes/helpCenter/static5.jpg" /></li>
+<li><span class="title_big">步骤六：</span><br /><span class="title_con">等待跳转页面完成，即可完成登录。此时已经正常链接WIFI。</span><img src="imgaes/helpCenter/static6.jpg" /></li>
+</ul>
+
+</div>
+ <!-- 手机用户首次登陆 -->
+<div class="help_content_first" id="a5" style="display:none">
+<div class="login_title"><span>手机用户首次登陆</span></div>
+
+<ul>
+<li><span class="title_big">步骤一：</span><br /><span class="title_con">打开手机上的无线设置</span><img src="imgaes/helpCenter/duanxin1.jpg" /></li>
+<li><span class="title_big">步骤二：</span><br /><span class="title_con">手机开始搜索无线网络，手动选定要链接的无线网络。这个例子中连接的网络是bdyun</span><img src="imgaes/helpCenter/duanxin2.jpg" /></li>
+<li><span class="title_big">步骤三：</span><br /><span class="title_con">在手机浏览器中任意打开一个网址（如www.baidu.com),出现如下Portal页面</span><img src="imgaes/helpCenter/duanxin3.jpg" /></li>
+<li><span class="title_big">步骤四：</span><br /><span class="title_con">输入手机号，点击申请动态密码，一分钟内只能点击一次。如得不到验证码，请时间到后重新点击获取。</span><img src="imgaes/helpCenter/duanxin4.jpg" /></li>
+<li><span class="title_big">步骤五：</span><br /><span class="title_con">得到验证码后将验证码输入到密码框中，点击登录。</span><img src="imgaes/helpCenter/duanxin5.jpg" /></li>
+<li><span class="title_big">步骤六：</span><br /><span class="title_con">等待跳转页面完成，即可完成登录。此时已经正常链接WIFI。</span><img src="imgaes/helpCenter/duanxin6.jpg" /></li>
+</ul>
+
+</div>
+ <!-- 退出登陆 -->
+<div class="help_content_sign_out" id="a6" style="display:none">
+<div class="login_title"><span>退出登陆</span></div>
+
+<ul>
+<li><span class="title_big">步骤一：</span><br /><span class="title_con">在登录成功界面，点击退出登录</span><img src="imgaes/helpCenter/sign_out1.jpg" /></li>
+<li><span class="title_big">步骤二：</span><br /><span class="title_con">出现退出界面，退出登录成功，欢迎下次使用。</span><img src="imgaes/helpCenter/sign_out2.jpg" /></li>
+
+</ul>
+
+
+</div>
+ <!-- 修改静态密码 -->
+<div class="help_content_update_static" id="a7" style="display:none">
+<div class="login_title"><span>修改静态密码</span></div>
+
+<ul>
+<li><span class="title_big">步骤一：</span><br /><span class="title_con">在登录成功界面，点击修改密码</span><img src="imgaes/helpCenter/update_static1.jpg" /></li>
+<li><span class="title_big">步骤二：</span><br /><span class="title_con">第一行填写要修改的密码，第二行确认一遍，需要和第一遍密码一致。</span><img src="imgaes/helpCenter/update_static2.jpg" /></li>
+<li><span class="title_big">步骤三：</span><br /><span class="title_con">点击确认，修改成功，下次登陆即可使用该密码进行登陆。</span><img src="imgaes/helpCenter/update_static3.jpg" /></li>
+</ul>
+</div>
+
+<!-- 添加AC -->
+<div class="help_content_ap" id="a14" style="display:none">
+<div class="login_title"><span>添加AC</span></div>
+<div class="login_info"><span>只有root管理员才能添加AC，请联系博达的管理员。</span></div>
+
+<br />
+<br />
+<br />
+</div>
+
+ <!-- 添加AP -->
+<div class="help_content_ap" id="a8" style="display:none">
+<div class="login_title"><span>添加AP</span></div>
+<div class="login_info"><span>注意：WIFIDOG的胖AP无需添加，请参考WIFIDOG AP上线流程文档。</span></div>
+<span class="title_big">步骤一：</span>
+<p class="title_ap">点击热点管理-->新增AP，填写AP的数据</p>
+<br />
+<p><img src="imgaes/helpCenter/ap1.jpg" /></p>
+<ul>
+<li>●  选择商铺：选择要添加AP的商铺名称。</li>
+<li>●	AP名称：AP名字，建议使用一个有意义的名字。</li>
+<li>●	AP地址：AP的安装地址。如：1楼大厅，302房间等</li>
+<li>●	AP MAC地址：AP的mac地址。</li>
+<li>●	设备编码：见下图中的物料编码。</li>
+<li>●	设备型号：见下图中的产品型号</li>
+</ul>
+<br/>
+<p style="text-align:center"><img src="imgaes/helpCenter/ap2.jpg" /></p>
+<br/>
+<ul>
+<li>●	带宽：店铺的宽带带宽，以M为单位显示。</li>
+<li>●	宽带运营商：店铺的宽带运营商。</li>
+</ul>
+<br/>
+<span class="title_big">步骤二：</span>
+<p class="title_ap">点击提交后出现提交成功的页面。</p>
+<br />
+<p><img src="imgaes/helpCenter/ap3.jpg" /></p>
+<br/>
+<span class="title_big">步骤三：</span>
+<p class="title_ap">点击热点管理-->AP列表菜单，确定AP已经成功添加。</p>
+<br />
+<p><img src="imgaes/helpCenter/ap4.jpg" /></p>
+<br />
+<br />
+<br />
+</div>
+ <!-- 添加热点（SSID） -->
+<div class="help_content_ap" id="a9" style="display:none">
+<div class="login_title"><span>添加热点（SSID）</span></div>
+<div class="login_info" style="margin-bottom:-50px;"><span></span></div>
+<span class="title_big">步骤一：</span>
+<p class="title_ap">点击“热点管理”-->新增热点菜单，选择刚加入的AP，并填入热点名称（SSID的名称）和热点的覆盖区域信息。</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/ssid1.jpg" /></p>
+<br/>
+<span class="title_big">步骤二：</span>
+<p class="title_ap">点击提交按钮，出现添加成功的信息。</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/ssid2.jpg" /></p>
+<br/>
+<span class="title_big">步骤三：</span>
+<p class="title_ap">点击“热点管理“-->"热点列表”，确认新的热点已经添加成功。</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/ssid3.jpg" /></p>
+<br />
+<br />
+<br />
+</div>
+
+ <!-- 广告投放 -->
+<div class="help_content_ap" id="a10" style="display:none">
+<div class="login_title"><span>广告投放</span></div>
+<div class="login_info"><span>广告模板包括三个页面：登陆页面，跳转页面和登陆成功页面。每个页面都有自己的模板，商家可以通过模板来投放广告。</span></div>
+<br/>
+<span class="title_big">步骤一：</span>
+<p class="title_ap">步骤一：点击广告管理-->广告投放菜单，选择要投放的AP，SSID，页面和认证方式的组合。可选模板会列在下面。
+</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/adv1.jpg" /></p>
+<br/>
+
+<span class="title_big">步骤二：</span>
+<p class="title_ap">选择蓝色的模板，点击选择素材按钮。这个模板有两个广告位，用AD标识。</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/adv3.jpg" /></p>
+<br />
+<span class="title_big">步骤三：</span>
+<p class="title_ap">在出现的弹出框中，为每个广告位选择图片。被选中的图片会有一个绿色的高亮框。如下图，广告位1使用的图片被高亮显示。</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/adv4.jpg" /></p>
+<br />
+<span class="title_big">步骤四：</span>
+<p class="title_ap">选择完图片后，点击预览按钮。出现一个新的窗口显示广告的预览效果。</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/adv5.jpg" /></p>
+<br />
+<span class="title_big">步骤五：</span>
+<p class="title_ap">如果满意广告的预览效果，点击确认上传按钮，出现确认上传的提示信息（两次确认）确认无误后，点击确定按钮。否则点击取消按钮回到上一步骤。</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/adv6.jpg" /></p>
+<br />
+<span class="title_big">步骤六：</span>
+<p class="title_ap">如果满意广告的预览效果，点击确认上传按钮，出现确认上传的提示信息（两次确认）</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/adv7.jpg" /></p>
+<br />
+<span class="title_big">步骤七：</span>
+<p class="title_ap">用手机连接wifi，确认新的广告已经投放成功。</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/adv8.jpg" /></p>
+<br />
+<br />
+<br />
+</div>
+<!-- 商铺新手攻略 -->
+<div class="help_content_ap" id="a11" style="display:none">
+<div class="login_title"><span>商铺新手攻略</span></div>
+<div class="login_info"><span>博达云的使用流程：</span></div>
+<div class="news">
+<ul id="intro" class="intro" style="text-align:center">
+<li ><a href="#"><img src="imgaes/helpCenter/intro11.png" /></a></li>
+<li style="margin-top:-2px;"><img src="imgaes/helpCenter/intro10.png" /></li>	
+<li style="margin-top:-3px;"><a><img src="imgaes/helpCenter/intro12.png" /></a></li>
+<li style="margin-top:-2px;"><img src="imgaes/helpCenter/intro10.png" /></li>	
+<li style="margin-top:1px;"><a href="javascript:;" onclick="c(12)" id="ab_shop"><img src="imgaes/helpCenter/intro15.png" /></a></li>
+<li style="margin-top:-2px;"><img src="imgaes/helpCenter/intro10.png" /></li>
+<li style="margin-top:1px;"><a href="javascript:;"><img src="imgaes/helpCenter/intro25.png" /></a></li>
+<li style="margin-top:-2px;"><img src="imgaes/helpCenter/intro10.png" /></li>
+<li style="margin-top:-3px;"><a href="javascript:;" onclick="c(14)" id="ab_ac"><img src="imgaes/helpCenter/intro23.png" /></a></li>
+<li style="margin-top:-2px;"><img src="imgaes/helpCenter/intro10.png" /></li>
+<li style="margin-top:-7px;"><a href="javascript:;" onclick="c(8)" id="ab_ap"><img src="imgaes/helpCenter/intro16.png" /></a></li>
+<li style="margin-top:-3px;"><img src="imgaes/helpCenter/intro10.png" /></li>
+<li style="margin-top:-7px;"><a href="javascript:;" onclick="c(9)" id="ab_ssid"><img src="imgaes/helpCenter/intro24.png" /></a></li>
+<li style="margin-top:-3px;"><img src="imgaes/helpCenter/intro10.png" /></li>
+<li style="margin-top:-6px;"><a href="javascript:;"onclick="c(16)" id="ab_art"><img src="imgaes/helpCenter/intro26.png" />
+<li style="margin-top:-3px;"><img src="imgaes/helpCenter/intro10.png" /></li>
+<li style="margin-top:-6px;"><a href="javascript:;"onclick="c(10)" id="ab_adv"><img src="imgaes/helpCenter/intro17.png" /></li></a>
+
+</ul>
+</div>
+<br />
+<br />
+<br />
+</div>
+ <!-- 商铺注册 -->
+<div class="help_content_ap" id="a12" style="display:none">
+<div class="login_title"><span>商铺注册</span></div>
+<div class="login_info"><span>用户以商家账户登录到系统，进入到商家首页，如下：</span></div>
+<p style="text-align:center"><img src="imgaes/helpCenter/shop_sign1.jpg" /></p>
+<span class="title_big">步骤一：</span>
+<p class="title_ap">进入商家注册页面，如下：</p>
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/shop_sign2.jpg" /></p>
+<br/>
+<ul>
+<li>页面必填项的详细解释：</li>
+<li>●  用户名：设置商家登陆云平台的用户名。</li>
+<li>●	密码：设置商家登陆云平台的密码。</li>
+<li>●	商户名称：商家名称。</li>
+<li>填写相关信息，带*号的为必填字段。填写完毕后，点击“注册”按钮即可完成注册，完成注册后，通过用</li>
+<li>户名和密码即可登陆云平台。</li>
+</ul>
+<br />
+<br />
+<br />
+</div>
+ <!-- 自定义广告模板 -->
+<div class="help_content_ap" id="a13" style="display:none">
+<div class="login_title"><span>自定义广告模板</span></div>
+<div class="login_info"><span>自定义模板是为有一定开发能力的商铺提供的。用户可以输入HTML代码，然后
+通知博达的研发人员，双方配合完成广告页面的定制。</span></div>
+<br/>
+<span class="title_big">步骤一：点击自定义广告模板菜单，出现下面的界面。</span>
+<br/>
+<!--<p class="title_ap">点击自定义广告模板菜单，出现下面的界面。</p> -->
+<br />
+<p style="border:1px solid #ddd;width:720px; height:auto;"><img src="imgaes/helpCenter/template1.jpg" width="720" /></p>
+<br/>
+<span class="title_big">步骤二：点击绿色的按钮，进入在线编辑模式。将自定义的模板HTML代码填入模板编辑输入
+框，该代码的效果在模板预览中显现。</span>
+<br /><br />
+<p style="border:1px solid #ddd;width:720px; height:auto;"><img src="imgaes/helpCenter/template2.jpg" /></p>
+<br/>
+<span class="title_big">步骤三：点击绿色的“提交模板”按钮，该模板将存入数据库。</span>
+<br/><br/>
+<p style="color:#007d44;font-size:16px; font-weight:800">注意：请在有博达研发人员参与和指导下使用该功能。</p>
+<br />
+<br />
+<br />
+</div>
+
+ <!-- 广告素材上传 -->
+<div class="help_content_ap" id="a16" style="display:none">
+<div class="login_title"><span>广告素材上传</span></div>
+
+<br/>
+<span class="title_big">步骤一：点击广告素材上传菜单，出现下面的界面。上部是已上传的素材列表，下部是图片上传区。</span>
+<br />
+<p style=" text-align:center"><img src="imgaes/helpCenter/art1.jpg" /></p>
+<p style=" text-align:center"><img src="imgaes/helpCenter/art2.jpg" /></p>
+<br/>
+<span class="title_big">步骤二：点击选择图片，出现选择图片的文件框。用户可以选择想要上传的图片（可多选）。</span>
+<br /><br />
+<p style=" text-align:center"><img src="imgaes/helpCenter/art3.jpg" /></p>
+<br/>
+<span class="title_big">步骤三：选择好图片后，图片的缩略图显示在上传区域。</span>
+<br/><br/>
+<p style=" text-align:center"><img src="imgaes/helpCenter/art4.jpg" /></p>
+<br/>
+<span class="title_big">步骤四：点击开始上传按钮，页面开始刷新（如果网速比较低，可能会出现卡顿一下）。图片上传
+成功后，显示需要管理员审核的提示框。当管理员审核通过后，用户就可以使用该上传图片了。一
+般审核时间为1天左右。</span>
+<br/><br/>
+<p style=" text-align:center"><img src="imgaes/helpCenter/art5.jpg" /></p>
+
+<br />
+<br />
+<br />
+</div>
+
+
+ <!-- 微信连WIFI商户指南 -->
+<div class="help_content_ap" id="a15" style="display:none">
+<div class="login_title"><span>微信连WIFI商户指南</span></div>
+<br/>
+<span class="title_big">整体流程图</span>
+<br/>
+<!--<p class="title_ap">点击自定义广告模板菜单，出现下面的界面。</p> -->
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/wifi1.jpg" /></p>
+<br/>
+<span class="title_big">详细流程指引</span>
+<br />
+<div class="login_info"><span style="color:#595959;">商户先登录公众平台（mp.weixin.qq.com），并开通“微信连Wi-Fi”插件。</span></div>
+<div class="login_info" style="margin-top:-20px;"><span style="color:#333;">1.	进入“添加设备”页面</span></div>
+<p style="text-align:center"><img src="imgaes/helpCenter/wifi2.jpg" /></p>
+<div class="login_info"><span style="color:#333;">2.	选择设备所属门店</span></div>
+<div class="login_info" style="margin-top:-20px;"><span style="color:#595959;">在选框中选择欲添加设备的门店（见下图）；如无门店则需在“门店管理”功能里新建</span></div>
+<p style="text-align:center"><img src="imgaes/helpCenter/wifi3.jpg" /></p>
+<div class="login_info"><span style="color:#333;">3.	添加设备，获得门店Wi-Fi信息</span></div>
+<div class="login_info" style="margin-top:-20px;"><span style="color:#595959;">选择设备类型为：portal型设备—设备商改造后接入，设置网络名称（SSID），点击【添加】按
+钮，下载弹窗中的门店Wi-Fi信息发送给设备商。其中，门店Wi-Fi信息包括：门店名称，SSID，
+shopId，appId，secretKey。</span></div>
+<br />
+<br />
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/weixinzhiyin3.jpg" /></p>
+<br/>
+<div class="login_info"><span style="color:#333;">4.	配置云平台</span></div>
+<div class="login_info" style="margin-top:-20px;"><span style="color:#595959;">在云平台上点击系统设置->认证登录设置->微信认证设置。将上一步骤得到shopId, appId, secretkey填入并提交。</span></div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<p style="text-align:center"><img src="imgaes/helpCenter/weixinzhiyin4.jpg" /></p>
+<br/>
+<br/>
+<div class="login_info"><span style="color:#333;">5.	配置商家主页等</span></div>
+<div class="login_info" style="margin-top:-20px;"><span style="color:#595959;">在公众平台后台完成商家主页配置，用户连网通过公众号下发消息配置，和用户连网数据监
+控获取等功能。</span></div>
+
+<br />
+<br />
+<br />
+<br />
+</div>
+
+ <!-- 短信模板设置 -->
+<div class="help_content_ap" id="a17" style="display:none">
+<div class="login_title"><span>短信模板设置</span></div>
+<div class="login_info"><span>短信模板设置模块可以提供自定义验证码内容，方便做个性化处理，增强营销效果。当前所有短信内容必须经过我公司专业人员的审核。一般审核时间在1~2个小时左右。一家商铺只能有一个短信模板。
+<br/><span style="color:#B90104">重要提示：</span><span>如果不配置短信模板，所发送的短信内容是短信平台人工审核，速度会非常慢。设置了短信模板后，模板审核通过，短信内容审核是机器自动进行，短信发送速度会有保证（60秒内）。</span></span></div>
+<br />
+<br />
+<br />
+
+<br />
+<br />
+<br />
+<span class="title_big">步骤一：配置短信模板。</span>
+<p class="login_info" style="margin-top:-10px;"><span style="color:#333;">在云平台上点击系统设置->认证登录设置->短信模板设置，在短信模板内容输入框内输入自定义短信信息。</p>
+<p style="text-align:center"><img src="imgaes/helpCenter/sms1.jpg" /></p>
+<div class="login_info" style="margin-top:-20px;"><span style="color:#333;">步骤二：查看短信模板</span></div>
+<p class="login_info" style="margin-top:-20px;"><span style="color:#333;">在云平台上点击系统设置->认证登录设置->短信模板列表</p>
+<p style="text-align:center"><img src="imgaes/helpCenter/sms2.jpg" /></p>
+
+<br />
+<br />
+<br />
+</div>
+
+</div>
+
+</div>
+<div>
+ <!-- 底部区域 -->
+<div class="bottom">
+<ul>
+<li><a href="">网站地图</a></li>
+<li><a href="">关于我们</a><span>|</span></li>
+<li><a href="">联系我们</a><span>|</span></li>
+</ul>
+<span class="imprint">@2014-2015 在线发布系统 版权所有 上海市浦东新区居里路123号</span>
+<span class="top_content"><img src="imgaes/helpCenter/f.jpg" /><a href="">后台管理</a></span>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+html{overflow-x:hidden}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+fieldset,img{border:0none}
+address,caption,cite,code,dfn,em,th,var,b,h1,h2,h3{font-style:normal;font-weight:normal}
+ol,ul,li{list-style-type:none}
+img{ border:0}
+
+body,html{margin:0px;height:100%;}
+.header_box{ height:82px; width:100%;}
+.header{ margin:0 auto; height:82px; overflow: hidden; width:960px;}
+.header *{ float:left;}
+.logo{ margin-right:453px; margin-top:14px;}
+.denglu{ margin-top:20px; margin-bottom:5px;}
+.access{font-family:'微软雅黑'; font-size:14px; color:#bbb;}
+/*nav*/
+.nav_box{ width:100%; background-color:#2ba8e1; height:62px;}
+.nav ul{ width:960px; margin:0 auto; overflow: hidden;}
+.nav li{ display:block; float:left; margin-right:60px; line-height:62px; margin-left:20px;}
+.nav ul li a{font-family:'微软雅黑'; font-size:18px; color:#FFF;text-decoration:none;}
+.nav ul li a:hover{ color:#090000}
+/*通知*/
+.tonggao{ margin-top:-4px; background-image:url(../imgaes/index/banner_bt.jpg); height:51px; width:100%;}
+.tongzhi{ margin:0 auto; width:960px; overflow:hidden;}
+.tongzhi *{ float:left;}
+.tongzhi a { font-family:'微软雅黑'; font-size:16px; color:#FFF;}
+.tongzhi span{ font-family:'微软雅黑'; font-size:20px; color:#FFF;}
+.tongzhi a span{ display:block; margin-top:-20px;}
+/*main*/
+.main_box{ background-image:url(../imgaes/index/main.jpg); width:100%; height:616px;}
+.main6{ margin:0 auto; width:960px;}
+.main6 span{ display:block; font-family:'微软雅黑'; font-size:30px; color:#FFF; padding-bottom:18px;}
+.main6 small{ font-size:18px;}
+.main6 ul{ padding-top:110px;}
+.main6 li{ float:left; padding:1px 2px;}
+/*main2*/
+.main2_box{ background-image:url(../imgaes/index/main2.jpg); width:100%; height:616px;}
+.main2 span{ display:block; font-family:'微软雅黑'; font-size:30px; color:#FFF; padding-bottom:18px;}
+.main2 small{ font-size:18px;}
+.main2{ margin:0 auto; width:960px;}
+.main2 ul{ padding-top:170px;}
+.main2 li{ float:left; padding:1px 2px;}
+/*main3*/
+.main3_box{ background-image:url(../imgaes/index/main3.jpg); width:100%; height:616px;}
+.main3{ padding-top:50px;padding-bottom:50px; margin:0 auto; width:960px; height:361px; background-color:#FFF;}
+.map{  width:300px; height:238px; background-image:url(../imgaes/index/map.jpg);}
+.main3 p{ font-family:'微软雅黑'; font-size:12px; padding-bottom:20px; line-height:24px; margin-top:20px;}
+
+.baidu_map{margin-left:97px; width:300px; height:400px; float:left}
+.partners{margin:0 auto; width:960px;height:115px;}
+.partners span{display:block; font-family:'微软雅黑'; font-size:30px; color:#FFF; padding-bottom:18px; line-height:160px;}
+.input{ width:465px; height:260px; float:right; margin-right:97px;}
+.input input{ width:210px;height:35px; float:left;margin-left:10px;margin-bottom:10px;}
+.input textarea{ width:437px; height:112px; margin-left:10px;}
+.submit{ margin-top:10px;}
+.wife{width:380px; height:60px;float:right;}
+.wife ul{ width:252px; height:140px; margin-left:58px;margin-top:10px;}
+.wife ul li{ float:left;margin-top:13px; }
+
+ .main{ width:100%; height:auto;}
+ .main div{ width:100%;}
+  div.floatCtro{ width:200px; height:350px; position:absolute; right:0; top:0; z-index:100}
+  
+  div.floatCtro a{ display:inline-block; display:none; width:60px; height:60px; margin:10px 0 0 0; background:#fff; color:#000;  vertical-align:middle; cursor:pointer;}
+  div.floatCtro a span{ display:block; width:28px; height:44px; line-height:22px;  font-family:'微软雅黑'; font-size:14px; line-height:22px; text-align:center; margin:8px 16px; _margin:-10px 0 0 16px;}
+ 

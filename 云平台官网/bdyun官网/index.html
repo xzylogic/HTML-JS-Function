@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>博达云平台官网首页</title>
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script>
+   $(function(){
+	   var AllHet = $(window).height();
+	   var mainHet= $('.floatCtro').height();
+	   var fixedTop = (AllHet - mainHet)/2
+	   $('div.floatCtro').css({top:fixedTop+'px'}); 
+	   $('div.floatCtro p').click(function(){
+			var ind = $('div.floatCtro p').index(this)+1;
+			var topVal = $('#float0'+ind).offset().top;
+			$('body,html').animate({scrollTop:topVal},1000)
+		})
+		$('div.floatCtro a').click(function(){
+			$('body,html').animate({scrollTop:0},1000)
+			})
+	   $(window).scroll(scrolls)
+	   scrolls()
+	   function scrolls(){
+		   var f1,f2,f3,f4,f5,f6,f7,bck;
+		   var fixRight = $('div.floatCtro p');
+		   var blackTop = $('div.floatCtro a')
+		   var sTop = $(window).scrollTop();
+		   fl = $('#float01').offset().top;
+
+		   var topPx = sTop+fixedTop
+		    $('div.floatCtro').stop().animate({top:topPx});
+			
+		   if(sTop<=f2-100){
+			   blackTop.fadeOut(300).css('display','none')
+			   }
+		   else{
+			   blackTop.fadeIn(300).css('display','block')
+			   }
+		   
+		   if(sTop>=fl){
+			   fixRight.eq(0).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f2-100){
+			   fixRight.eq(1).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f3-100){
+			   fixRight.eq(2).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f4-100){
+			   fixRight.eq(3).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f5-100){
+			   fixRight.eq(4).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f6-100){
+			   fixRight.eq(5).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f7-100){
+			   fixRight.eq(6).addClass('cur').siblings().removeClass('cur');
+			   } 
+		
+	     }
+	   })
+</script>
+</head>
+<body>
+<!--悬浮-->
+<!--<div class="main">
+  <div id="float01" class="cur"></div>
+  <div class="floatCtro">
+    <p><img src="imgaes/index/cus.png" usemap="#Map5">
+      <map name="Map5">
+        <area shape="rect" coords="56,129,126,145" href="#nav_box1">
+        <area shape="rect" coords="57,153,125,171" href="#nav_box2">
+        <area shape="rect" coords="57,177,125,196" href="#nav_box3">
+        <area shape="rect" coords="58,201,125,218" href="helpCenter.html">
+        <area shape="rect" coords="58,224,126,244" href="#nav_box5" usemap="#map5">
+      </map>
+    </p>
+  </div>
+</div>-->
+<!--头部-->
+<div class="header_box" id="nav_box1">
+  <div class="header">
+    <div class="logo"><a href="index.html" title="博达云平台官网首页"> <img src="imgaes/index/logo.jpg"></a> </div>
+    <div class="denglu"><a href="http://139.196.25.90:8080/adminbd/index" title="博达云平台后台管理"><img src="imgaes/index/deng.jpg"></a></div>
+    <!--<div class="access">访问次数：<span style="float:right;margin-left:3px;">次</span><span style="float:right;color:#F94346">32320</span></div> -->
+  </div>
+</div>
+<!--导航-->
+
+<div class="nav_box">
+  <div class="nav">
+    <ul>
+      <li><a href="#nav_box1">网站首页</a></li>
+      <li><a href="#nav_box2">产品服务</a></li>
+      <li><a href="#nav_box3">合作伙伴</a></li>
+      <li><a href="helpCenter.html">帮助中心</a></li>
+      <li><a href="#">官方论坛</a></li>
+       <li><a href="#nav_box5">联系我们</a></li>
+    </ul>
+  </div>
+</div>
+<!--banner-->
+<div> <img width="100%"  src="imgaes/index/main1.jpg"> </div>
+<!--tongzhi-->
+<div class="tonggao">
+  <div class="tongzhi"> <img  style=" margin-top:10px; margin-left:40px;"src="imgaes/index/tongzhi.png"> <span style=" margin-top:12px; margin-left:10px;">通知</span> <a style=" margin-top:14px; margin-left:50px;">欢迎使用博达云平台。</a> </div>
+</div>
+
+<!--main-->
+<div class="main_box">
+  <div  class="main6" id="nav_box2">
+    <ul>
+      <span >产品服务 <small>Products & Services</small> </span> <a href="#">
+      <li><img src="imgaes/index/yun1.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/yun2.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/yun3.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/yun4.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/yun5.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/yun6.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/yun7.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/yun8.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/yun9.jpg"></li>
+      </a>
+    </ul>
+  </div>
+</div>
+<!--main2-->
+<div class="main2_box" id="nav_box3">
+  <div class="main2">
+    <ul>
+      <span >合作伙伴 <small>Partner</small> </span> <a href="#">
+      <li><img src="imgaes/index/hezuo1.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/hezuo2.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/hezuo3.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/hezuo4.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/hezuo5.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/hezuo5.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/hezuo5.jpg"></li>
+      </a> <a href="#">
+      <li><img src="imgaes/index/hezuo5.jpg"></li>
+      </a>
+    </ul>
+  </div>
+</div>
+<!--main3-->
+
+<div class="main3_box" id="nav_box5">
+  <div class="partners"> <span >联系我们 <small>Contact us</small> </div>
+  <div class="main3">
+    <div class="baidu_map"> <img src="imgaes/index/map.jpg">
+      <p> Copynght（c）2007-2013 RenheHR,ALL Rights Rerved<br>
+        版权所有 上海博达数据有限公司<br>
+        地址：上海浦东张江高科居里路123号<br>
+        电话：021-50800666</p>
+    </div>
+    <div class="input">
+      <form action="" method="">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <textarea rows="3" cols="20"> </textarea>
+        <a href="#">
+        <div style="float:right;margin-right:16px;"> <img src="imgaes/index/sousuo.jpg"> </div>
+        </a>
+      </form>
+    </div>
+    <div class="wife">
+      <ul>
+        <li style=""><img src="imgaes/index/wife.png"><br>
+          <span style=" font-family:'宋体'; font-size:12px;">&nbsp;扫描关注公众号</span></li>
+        <li> <span style="font-family:'微软雅黑'; font-size:16px; color:#000;">&nbsp;&nbsp;关注博达云</span> </li>
+        <li> &nbsp;<img  src="imgaes/index/weixin.png"> <span style="font-family:'微软雅黑'; font-size:12px; color:#36acf2;">博达云公众号</span> </li>
+        <li> &nbsp;<img src="imgaes/index/wx_wife.png"> <span style="font-family:'微软雅黑'; font-size:12px; color:#36acf2;">微信连WIFE</span> </li>
+      </ul>
+    </div>
+  </div>
+</div>

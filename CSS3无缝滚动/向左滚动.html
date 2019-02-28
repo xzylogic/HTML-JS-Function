@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS3文字向左无缝滚动</title>
+    <style>
+        #xzy {
+            width: 500px;
+            overflow: hidden;
+            margin: 200px auto;
+        }
+        .list {
+            margin: 0;
+            padding: 0;
+            width: 1000px;
+            position: relative;
+            animation: run 6s infinite linear;
+        }
+        .list li {
+            list-style: none;
+            float: left;
+            width: 98px;
+            height: 98px;
+            color: lightblue;
+            text-align: center;
+            font: 50px/100px "微软雅黑";
+            border: 1px solid lightblue;
+        }
+        #xzy:hover .list {
+            animation-play-state: paused;
+        }
+        @keyframes run {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: -500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="xzy">
+        <ul class="list">
+            <li>大</li>
+            <li>家</li>
+            <li>好</li>
+            <li>啊</li>
+            <li>！</li>
+            <li>大</li>
+            <li>家</li>
+            <li>好</li>
+            <li>啊</li>
+            <li>！</li>
+        </ul>
+    </div>
+</body>
+</html>  

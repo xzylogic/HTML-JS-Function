@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>医联云健康V2</title>
+  <script src="./jQuery.js"></script>
+</head>
+<body style="background: url(./WechatIMG5.png) no-repeat; background-size:100% 100%; background-attachment:fixed; ">
+<div style="text-align: center;margin-top: 100px;">
+  <img src="https://yuyue.shdc.org.cn:9080//uploadImage//upload/docImgSmall/20181016/app_share.png"
+       alt="二维码" width="220" height="220">
+  <p>长按识别二维码</p>
+  <p>下载使用【医联云健康V2】</p>
+  <div style="height: 2600px;"></div>
+  <button id="backTop" style="position: fixed;right: 0;bottom: 0;">返回顶部</button>
+</div>
+<script>
+    $("#backTop").click(function () {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800);
+    });
+
+    $(window).bind('scroll', function () {
+      if($(window).scrollTop() > $(window).height()){
+        $("#backTop").fadeIn();
+      }else{
+        $("#backTop").fadeOut();
+      }
+    })
+</script>
+</body>
+</html>

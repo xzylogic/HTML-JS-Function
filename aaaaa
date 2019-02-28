@@ -1,0 +1,241 @@
+area hospitalLevel hospitalNature hospitalType mechanNature
+
+otherEquipNumber otherEquipNumberValue pipeBelongDepartment_other
+
+
+ApiModelProperty("医院名称")
+    public String hospitalName;
+    @ApiModelProperty("医院的等级")
+    public String hospitalLevel;
+    @ApiModelProperty("核定总床位数")
+    public String totalBedNum;
+    @ApiModelProperty("实际开放总床位数")
+    public String openBedNum;
+    @ApiModelProperty("医院机构性质")
+    public String mechanNature;
+    @ApiModelProperty("医院性质")
+    public String hospitalNature;
+    @ApiModelProperty("其中属于")
+    public String hospitalType;
+    @ApiModelProperty("区域划分（旧区）")
+    public String area;
+
+    @ApiModelProperty("病房床位数（单位：张）")
+    public String wardBedNum;
+    @ApiModelProperty("CCU床位数（单位：张）")
+    public String ccuBedNum;
+    @ApiModelProperty("医师人数（单位：人）")
+    public String doctorNum;
+    @ApiModelProperty("护士人数（单位：人）")
+    public String nurseNum;
+    @ApiModelProperty("是否有心外科")
+    public String ifHeartSurgery;
+    @ApiModelProperty("是否开展过开胸手术")
+    public String ifThoracotomy;
+
+    以上正常
+
+    @ApiModelProperty("导管室数量（单位：间）")
+    public String pipeNum;
+    @ApiMod elProperty("手术区域平均使用面积（单位：平米）")
+    public String averageArea;
+    @ApiModelProperty("导管室隶属部门")
+    public String pipeDepartment;
+    @ApiModelProperty("导管室在医院内的地理位置")
+    public String pipeLocation;
+    @ApiModelProperty("数字减影血管造影机")
+    public List<DsaDto> dsaDtos;
+    @ApiModelProperty("IABP")
+    public String iabp;
+    @ApiModelProperty("IVUS")
+    public String ivus;
+    @ApiModelProperty("OCT")
+    public String oct;
+    @ApiModelProperty("FFR")
+    public String ffr;
+    @ApiModelProperty("电生理记录仪")
+    public String elr;
+    @ApiModelProperty("旋磨仪")
+    public String rgi;
+    @ApiModelProperty("呼吸机")
+    public String bm;
+    @ApiModelProperty("射频消融仪")
+    public String kyky;
+    @ApiModelProperty("冷冻消融仪")
+    public String ci;
+    @ApiModelProperty("Carto系统")
+    public String carto;
+    @ApiModelProperty("Ensite系统")
+    public String ensite;
+    @ApiModelProperty("电生理刺激仪")
+    public String els;
+    @ApiModelProperty("起搏器分析仪")
+    public String pa;
+    @ApiModelProperty("麻醉机")
+    public String am;
+    @ApiModelProperty("导管室层流级别")
+    public String pipeLevel;
+    @ApiModelProperty("层流级别")
+    public String level;
+
+    @ApiModelProperty("科主任姓名")
+    public String directorName;
+    @ApiModelProperty("导管室主任")
+    public String pipeDirector;
+    @ApiModelProperty("联系电话")
+    public String phone;
+    @ApiModelProperty("医师总人数")
+    public String surgeonNum;
+    @ApiModelProperty("PCI组")
+    public GroupDto pciDto;
+    @ApiModelProperty("电生理组")
+    public GroupDto esDto;
+    @ApiModelProperty("结构性心脏病介入组")
+    public GroupDto shdDto;
+
+    @ApiModelProperty("护士人才架构")
+    public OrganizeDto nurseDto;
+    @ApiModelProperty("技术员人才架构")
+    public OrganizeDto techDto;
+
+    @ApiModelProperty("PCI手术")
+    public CommonDto pciCommonDto;
+    @ApiModelProperty("起搏器手术")
+    public CommonDto poCommonDto;
+    @ApiModelProperty("射频消融术")
+    public CommonDto rfCommonDto;
+    @ApiModelProperty("先心病介入")
+    public CommonDto chdCommonDto;
+    @ApiModelProperty("左心耳封堵术")
+    public CommonDto laacCommonDto;
+    @ApiModelProperty("经皮主动脉瓣膜置换/成形术")
+    public CommonDto pavCommonDto;
+
+    @ApiModelProperty("手术登记方式")
+    public String operaCheckWay;
+    @ApiModelProperty("电脑版的登记方式")
+    public String pcCheckWay;
+    @ApiModelProperty("影像资料的管理")
+    public String imageManage;
+    @ApiModelProperty("承载媒介")
+    public String medium;
+
+    @ApiModelProperty("目前导管室的数量能够满足您科的工作量吗")
+    public String satisfied;
+    @ApiModelProperty("导管室人员中最紧缺的是")
+    public String lack;
+    @ApiModelProperty("导管室工作经常加班吗")
+    public String overtime;
+    @ApiModelProperty("冠心病造影检查除了心脏科是否其他科室也开展")
+    public String ca;
+    @ApiModelProperty("冠心病造影检查还有哪科室开展")
+    public String caDepartment;
+    @ApiModelProperty("其他科室每周造影检查数量")
+    public String caCount;
+    @ApiModelProperty("心脏介入治疗除了心脏科是否其他科室也开展")
+    public String pci;
+    @ApiModelProperty("心脏介入治疗否其他哪科室也开展")
+    public String pciDepartment;
+    @ApiModelProperty("目前开展心导管室工作最困难的是")
+    public String trouble;
+    @ApiModelProperty("建议的培训项目或内容")
+    public String program;
+    @ApiModelProperty("给行政部门或质控中心的建议")
+    public String suggest;
+
+
+    @ApiModelProperty("填表人")
+    public String name;
+    @ApiModelProperty("填表日期")
+    public String date;
+
+
+
+
+
+
+
+
+
+
+
+
+    public class DsaDto {
+
+        @ApiModelProperty("品牌、型号")
+        public String dsaName;
+        @ApiModelProperty("安装年月（例：2018.4）")
+        public String dsaDate;
+    }
+
+
+    public class GroupDto {
+
+        @ApiModelProperty("组内共多少人")
+        public String totalNum;
+        @ApiModelProperty("组内博士多少人")
+        public String doctorNum;
+        @ApiModelProperty("组内硕士多少人")
+        public String masterNum;
+        @ApiModelProperty("高级职称多少人")
+        public String seniorNum;
+        @ApiModelProperty("中级职称多少人")
+        public String mediumNum;
+        @ApiModelProperty("组内手术医师的执业范围")
+        public String canSelect;
+        @ApiModelProperty("目前参与急诊手术的人数")
+        public String surgeryNum;
+
+    }
+
+
+    public class OrganizeDto {
+
+        @ApiModelProperty("总人数")
+        public String totalNum;
+        @ApiModelProperty("专科")
+        public String juniorNum;
+        @ApiModelProperty("本科")
+        public String bachelorNum;
+        @ApiModelProperty("硕士")
+        public String masterNum;
+        @ApiModelProperty("博士")
+            public String doctorNum;
+        @ApiModelProperty("高级职称")
+        public String seniorNum;
+        @ApiModelProperty("中级职称")
+        public String mediumNum;
+
+        @ApiModelProperty("心血管内科")
+        public String cmNum;
+        @ApiModelProperty("心外科")
+        public String casNum;
+        @ApiModelProperty("放射科")
+        public String rdNum;
+        @ApiModelProperty("其他学科名称")
+        public String otherName;
+        @ApiModelProperty("其他学科人数")
+        public String otherNum;
+    }
+
+
+    public class CommonDto {
+
+        @ApiModelProperty("是否开展")
+        public String ifHave;
+        @ApiModelProperty("手术量")
+        public String operaCount;
+        @ApiModelProperty("其中，急诊手术量")
+        public String emergencyCount;
+        @ApiModelProperty("病种比例（收治此类病人数/住院总人次数）")
+        public String sickKindRate;
+        @ApiModelProperty("平均住院日")
+        public String averageInHospital;
+        @ApiModelProperty("平均手术费用")
+        public String averageOperaCost;
+        @ApiModelProperty("治愈率")
+        public String cureRate;
+        @ApiModelProperty("死亡率")
+        public String diedRate;
+
+    }

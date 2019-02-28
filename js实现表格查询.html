@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=" utf-8">
+  <meta name="author" content="http://www.softwhy.com/" />
+  <title>蚂蚁部落</title>
+  <script type="text/javascript">
+    window.onload=function(){
+      var oTab=document.getElementById("tab");
+      var oBt=document.getElementsByTagName("input");
+      oBt[1].onclick=function(){
+        for(var i=0;i<oTab.tBodies[0].rows.length;i++){
+          var str1 = oTab.tBodies[0].rows[i].cells[1].innerHTML.toUpperCase();
+          var str2=oBt[0].value.toUpperCase();
+          console.log(str1)
+          console.log(str2)
+          if(str1==str2){
+            oTab.tBodies[0].rows[i].style.background='red';
+          }
+          else{
+            oTab.tBodies[0].rows[i].style.background='';
+          }
+
+          if(str1.search(str2)!=-1){
+            oTab.tBodies[0].rows[i].style.background='red';
+          }
+          else{
+            oTab.tBodies[0].rows[i].style.background='';
+          }
+          var arr=str2.split(' ');
+          for(var j=0;j<arr.length;j++){
+            if(str1.search(arr[j])!=-1){
+              oTab.tBodies[0].rows[i].style.background='red';
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+姓名:<input type="text"/>
+<input type="button" value="搜索"/>
+<table  cellspacing="1" id="tab">
+  <thead>
+  <td><h2>id</h2></td>
+  <td><h2>name</h2></td>
+  <td><h2>age</h2></td>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>张三</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>李四</td>
+    <td>19</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>蚂蚁部落</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>antzone</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>李四</td>
+    <td>18</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

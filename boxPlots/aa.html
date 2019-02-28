@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript" src="./box-plot-master/jQuery.js"></script>
+  <!--<script src="http://10.2.97.177:8080/data/get"></script>-->
+</head>
+<body>
+<script>
+  //   "-1": [{"userName": "俞国伟", "datas": ["1.15", "2.02", "2.01"]}],
+  //   "-3": [{"userName": "相品堂", "datas": ["1.2400", "1.45", "1.7000"]}],
+  //   "-5": [{"userName": "黄炳昌", "datas": ["3.70", "3.36", "2.76", "2.87", "2.75", "2.96"]}],
+  //   "-6": [{"userName": "梁赞明", "datas": ["1.32", "2.20", "1.50"]}]
+  // }
+  // const values = Object.values(oldData)
+  // const data = [];
+  // for(let arr of values){
+  //   data.push(arr[0].datas)
+  // }
+
+  // $(document).ready(function(){
+  //   const url = "http://10.2.97.68:8080/data/get";
+  //   function getData() {
+  //     return new Promise(function(resolve, reject){        //做一些异步操作
+  //       $.getJSON(url, function(result){
+  //         resolve(result);
+  //       })
+  //     });
+  //   }
+  //   getData().then(res => {console.log(res)}).catch(e => {console.log(e)})
+  // })
+
+
+  // for (var seriesIndex = 0; seriesIndex < 2; seriesIndex++) {
+  //   var seriesData = [];
+  //   for (var i = 0; i < 3; i++) {
+  //     var cate = [];
+  //     for (var j = 0; j < 4; j++) {
+  //       cate.push(parseInt(Math.random() * 200));
+  //     }
+  //     console.log(cate)
+  //     seriesData.push(cate);
+  //   }
+  //   console.log(seriesData)
+  //
+  // }
+
+
+  let arr = [[1,2],[4,5,6,7,8,7],[7,8,9]];
+  let newArr = [], maxLen;
+  arr.map(value => {
+    console.log(value)
+    newArr.push(value.length);
+  })
+  newArr.sort();
+  maxLen = newArr[newArr.length-1];
+
+  if(arr[0].length < maxLen){
+    console.log(12345611111112);
+    // arr[0].length = maxLen;
+    // alert(maxLen+'----'+arr[0].length)
+    console.log(typeof(maxLen-arr[0].length), maxLen-arr[0].length)
+    let firstArr = [...arr[0]];
+    for(let i=0; i<maxLen-firstArr.length; i++){
+      arr[0].push('')
+    }
+  }
+  console.log(arr[0])
+  var newArray = arr[0].map(function(col, i) {
+    // console.log(col, i)
+    return arr.map(function(row) {
+      // console.log(row)
+      return row[i] || '';
+    })
+  });
+  console.log(newArray)
+
+  // const res = {
+  //   "0": [{"userName": "郁士中", "datas": ["1.07", "1.04", "1.46"]},
+  //     {
+  //       "userName": "李明亮",
+  //       "datas": ["1.47", "0.69", "1.20"]
+  //     }],
+  //   "-1": [{"userName": "张洪英", "datas": ["1.67", "1.79", "2.02"]},
+  //     {
+  //       "userName": "俞国伟",
+  //       "datas": ["1.15", "2.02", "2.01"]
+  //     }],
+  //   "-2": [{"userName": "相品堂", "datas": ["1.2400", "1.45", "1.7000"]}],
+  //   "-4": [{"userName": "黄炳昌", "datas": ["3.70", "3.36", "2.76", "2.87", "2.75", "2.96"]}],
+  //   "-5": [{"userName": "章龙珍", "datas": ["1.10", "1.30", "1.63"]}],
+  //   "-12": [{"userName": "吴伟超", "datas": ["0.99", "1.46", "1.20"]}]
+  // }
+  //
+  // let data = [];
+  // let keys = Object.keys(res);
+  // let values = Object.values(res);
+  // const len = values.length;
+  // for (let i = 0; i < len; i++) {
+  //   let seriesData = [];
+  //   for (let j = 0; j < len; j++) {
+  //     let cate = [];
+  //     for (let m = 0; m < values[i].length; m++) {
+  //       console.log(values[i].length);
+  //       let lastData = values[i][m].datas;
+  //       // console.log(lastData);
+  //       cate.push(lastData);
+  //     }
+  //     seriesData.push(cate);
+  //
+  //     // if(cate.length !== 1){
+  //     //   // let arrCate = [];
+  //     //   const cateVal = Object.values(cate);
+  //     //   cateVal.forEach(value => {
+  //     //     seriesData.push(value);
+  //     //   })
+  //     // }else{
+  //     //   seriesData.push(cate[0]);
+  //     // }
+  //   }
+  //   console.log(seriesData[0])
+  //   seriesData[0].map(value => {
+  //     changeData(i, value);
+  //   })
+  //   data.push(seriesData)
+  //   // data.push(echarts.dataTool.prepareBoxplotData(seriesData[0]));
+  // }
+  //
+  // function changeData(i, value) {
+  //   console.log(i, value)
+  //   let oldArr = [], newArr = [];
+  //   // oldArr[i].push(value);
+  //   // for(let n = 0; n <= i; n++){
+  //     newArr[i] = value;
+  //   // }
+  //
+  // }
+  // console.log(seriesData)
+</script>
+</body>
+</html>

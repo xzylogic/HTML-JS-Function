@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = ['sdaa.japg', 'sdab..jpg', 'c.PNGs', 'd.d.s.PNg', 'e.sPNg'];
+  const reg=/\.(jpg|jpeg|png)$/gi;
+  // const reg=/([^\s]+(?=\.(jpg|JPG|jpeg|JPEG|png|PNG))\.\2)/gi;
+  const Pic = [];
+  for(let i = 0; i < arr.length; i++) {
+    reg.lastIndex = 0;          //这里我将 lastIndex 重置为 0
+    console.log(reg.test(arr[i]))// true true true
+    console.log(reg.lastIndex);   //reg.lastIndex = 15
+    reg.lastIndex = 0;          //这里我将 lastIndex 重置为 0
+    Pic.push(reg.test(arr[i]));
+  }
+  console.log(Pic) //? ? ?
+</script>
+</body>
+</html>
