@@ -20,3 +20,6 @@ if (/.*Firefox.*/.test(agent)) {
         }
     }
 }
+// 取消绑定
+// document.onmousewheel = null;
+// document.removeEventListener('DOMMouseScroll', () => null);
